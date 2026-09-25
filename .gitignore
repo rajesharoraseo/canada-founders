@@ -1,0 +1,11 @@
+# WordPress theme/plugin package outputs
+canada founder/**/dist/
+canada founder/**/*.zip
+canada founder/**/*.png
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+
+# Local WordPress install artifacts (if not tracked intentionally)
+wp-content/uploads/
