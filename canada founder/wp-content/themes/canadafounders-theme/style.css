@@ -1,0 +1,395 @@
+/*
+Theme Name: CanadaFounders Theme
+Theme URI: https://canadafounders.com/
+Author: Jules
+Author URI: https://canadafounders.com/
+Description: A modern, responsive, fully editable WordPress theme for CanadaFounders. Built specifically for the Canadian business community network.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: canadafounders
+Tags: custom-colors, custom-menu, featured-images, flexible-header, responsive-layout, block-styles, editor-style
+*/
+
+:root {
+    --cf-red: #ED1C24;
+    --cf-red-hover: #c41219;
+    --cf-dark: #1B1B1B;
+    --cf-blue: #147FC1;
+    --cf-white: #FFFFFF;
+    --cf-light-bg: #F7F8FA;
+    --cf-border: #E9ECEF;
+    --cf-text: #4a4a4a;
+    
+    --cf-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --cf-font-heading: inherit;
+    
+    --container-width: 1200px;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+}
+
+/* Reset & Basics */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--cf-font-body);
+    color: var(--cf-text);
+    line-height: 1.6;
+    background-color: var(--cf-white);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--cf-font-heading);
+    color: var(--cf-dark);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+a {
+    color: var(--cf-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--cf-red);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layout */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section {
+    padding: var(--spacing-lg) 0;
+}
+
+.section-light {
+    background-color: var(--cf-light-bg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--cf-red);
+    color: var(--cf-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--cf-red-hover);
+    color: var(--cf-white);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cf-dark);
+    border: 2px solid var(--cf-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cf-dark);
+    color: var(--cf-white);
+}
+
+/* Header */
+.site-header {
+    background: var(--cf-white);
+    border-bottom: 1px solid var(--cf-border);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-branding img {
+    max-height: 50px;
+    width: auto;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.main-navigation a {
+    color: var(--cf-dark);
+    font-weight: 500;
+}
+
+.main-navigation a:hover {
+    color: var(--cf-red);
+}
+
+.header-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--cf-dark);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--cf-dark);
+    color: var(--cf-white);
+    padding: var(--spacing-lg) 0 2rem;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-widget h3 {
+    color: var(--cf-white);
+    margin-bottom: 1rem;
+}
+
+.footer-widget ul {
+    list-style: none;
+}
+
+.footer-widget ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-widget a {
+    color: #ccc;
+}
+
+.footer-widget a:hover {
+    color: var(--cf-red);
+}
+
+.site-info {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    color: #aaa;
+    font-size: 0.875rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--cf-white), var(--cf-light-bg));
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    color: var(--cf-text);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Cards (Generic) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.card {
+    background: var(--cf-white);
+    border: 1px solid var(--cf-border);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Member Cards */
+.member-card {
+    text-align: center;
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+}
+
+.member-role {
+    color: var(--cf-blue);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-company {
+    font-weight: 600;
+}
+
+.member-location {
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Event Cards */
+.event-card .event-date {
+    color: var(--cf-red);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.event-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Partner Logos */
+.partner-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: var(--spacing-md);
+}
+
+.partner-logo {
+    max-width: 150px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Empty States */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: var(--cf-light-bg);
+    border-radius: 8px;
+    border: 1px dashed var(--cf-border);
+    color: #666;
+}
+
+/* Content Area */
+.site-content {
+    min-height: 60vh;
+    padding: var(--spacing-lg) 0;
+}
+
+.page-title {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--cf-red);
+    display: inline-block;
+}
+
+/* Gutenberg Blocks overrides */
+.wp-block-group {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-navigation ul {
+        display: none; /* simple toggle via js */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--cf-white);
+        padding: 1rem;
+        border-bottom: 1px solid var(--cf-border);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    
+    .main-navigation.toggled ul {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .header-cta {
+        display: none;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

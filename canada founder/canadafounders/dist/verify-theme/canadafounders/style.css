@@ -1,0 +1,16 @@
+/*
+Theme Name: CanadaFounders
+Theme URI: http://example.com/canadafounders
+Author: Your Name
+Author URI: http://example.com
+Description: A WordPress theme for the CanadaFounders community, designed to connect entrepreneurs and business owners across Canada.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: business, community, entrepreneurship, responsive
+Text Domain: canadafounders
+*/ 
+
+@import url('assets/css/theme.css');
+
+/* Additional custom styles can be added below */
